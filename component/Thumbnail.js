@@ -6,12 +6,14 @@ function Thumbnail({result}) {
 
     return (
         <div className="flex flex-col m-3 cursor-pointer group">
+            <div>
             <Image 
             layout="responsive"
             src={`${BASE_URL}${result.backdrop_path || result.poster_path}`}
             width={1290}
             height={780}
             />
+            </div>
             <div>
                 <p className="truncate ">{result.overview}</p>
                 <h2 className=" mt-1 text-2xl duration-100 transition-all ease-in-out group-hover:text-white group-hover:font-bold">{result.title}</h2>
