@@ -1,6 +1,6 @@
 {
   "homepage": "https://jshuaang.github.io/react-movie/",
-  "name": "imdb-2.0",
+  "name": "react-movie",
   "version": "0.1.0",
   "private": true,
   "scripts": {
