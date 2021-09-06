@@ -14,7 +14,10 @@ module.exports = {
   },
   variants: {
     extend: {
-      textColor: ['active']
+      textColor: ['active'],
+      scale: ['group-hover'],
+      transitionProperty: ['group-hover'],
+      fontWeight: ['hover', 'group-hover'],
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],
