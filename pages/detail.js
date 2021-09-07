@@ -31,8 +31,8 @@ function detail({result}) {
                     <div className="mt-3">
                         <h2 className="text-xl uppercase font-bold text-gray-50 mb-1">Visit</h2>
                         <div>
-                            <a href={result.homepage} target="_blank"><button className="h-10 mr-3 w-44 text-gray-800 font-bold rounded-lg bg-gray-300 hover:bg-gray-500 hover:text-gray-300">Homepage</button></a>
-                            <a href={`https://www.imdb.com/title/${result.imdb_id}`} target="_blank"><button className="h-10 w-44 text-gray-800 font-bold rounded-lg bg-gray-300 hover:bg-gray-500 hover:text-gray-300">IMDB</button></a>
+                            <a href={result.homepage} target="_blank" rel="noreferrer"><button className="h-10 mr-3 w-44 text-gray-800 font-bold rounded-lg bg-gray-300 hover:bg-gray-500 hover:text-gray-300">Homepage</button></a>
+                            <a href={`https://www.imdb.com/title/${result.imdb_id}`} target="_blank" rel="noreferrer"><button className="h-10 w-44 text-gray-800 font-bold rounded-lg bg-gray-300 hover:bg-gray-500 hover:text-gray-300">IMDB</button></a>
                         </div>
                     </div>
                     <div className="mt-3">
