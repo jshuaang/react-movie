@@ -1,17 +1,29 @@
 import {HomeIcon, SearchIcon, UserIcon} from '@heroicons/react/outline'
 import HeaderIcon from './HeaderIcon'
-import Image from 'next/image'
+import Search from './Search'
+import {useState} from 'react'
+import {useRouter} from 'next/router'
 
 function Header() {
+    const [search, setSearch] = useState(false)
+    const router = useRouter()
+
+    const searchOn = () => {
+        search ? setSearch(false) : setSearch(true)
+    }
+
     return (
         <div className="flex flex-col justify-between p-2 h-20 items-center px-20 sm:flex-row">
             <div>
-                <h1 className="font-bold text-3xl mb-3">React Movie</h1>
+                <h1 className="font-bold text-3xl mb-3 ml-16">React Movie</h1>
             </div>
 
-            <div className="flex w-64 justify-around">
-                <HeaderIcon Icon={HomeIcon} label="Home"/>
-                <HeaderIcon Icon={SearchIcon} label="Search"/>
+            <div className="flex w-64 justify-around mx-10">
+                <div className="flex items-top">
+                    <HeaderIcon Icon={SearchIcon} label="Search" onClick={searchOn}/>
+                    {search ? <Search /> : null }
+                </div>
+                <HeaderIcon Icon={HomeIcon} label="Home" onClick={() => router.push('/')}/>
                 <HeaderIcon Icon={UserIcon} label="Profile"/>
             </div>
         </div>

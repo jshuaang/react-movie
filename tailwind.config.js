@@ -4,14 +4,19 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: {
-      cyan: colors.cyan,
-      gray: colors.coolGray,
-      white: colors.white,
-      yellow: colors.yellow
+    extend: {
+      colors: {
+        cyan: colors.cyan,
+        gray: colors.coolGray,
+        white: colors.white,
+        yellow: colors.yellow
+      },
+      spacing: {
+         '96': '34rem',
+       }
     },
-    extend: {},
   },
+
   variants: {
     extend: {
       textColor: ['active'],

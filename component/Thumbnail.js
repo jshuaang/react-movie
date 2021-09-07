@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import {ThumbUpIcon} from '@heroicons/react/outline'
 
-function Thumbnail({result}) {
+function Thumbnail({result, ...rest}) {
     const BASE_URL = 'https://image.tmdb.org/t/p/original'
 
     return (
-        <div className="flex flex-col m-3 cursor-pointer group">
-            <div>
+        <div className="flex flex-col m-3 cursor-pointer group" {...rest}>
+            <div className='transform duration-200 group-hover:scale-105 mb-3'>
             <Image 
             layout="responsive"
             src={`${BASE_URL}${result.backdrop_path || result.poster_path}`}

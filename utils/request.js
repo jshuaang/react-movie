@@ -1,6 +1,9 @@
 const API_KEY = process.env.API_KEY;
 
 export default {
+    fetchSearchMovies: {
+        url: `search/movie?api_key=${API_KEY}&query=`
+    },
     fetchActionMovies: {
         title: 'Action',
         url: `discover/movie?api_key=${API_KEY}&with_genres=28`

@@ -28,11 +28,20 @@ export default function Home({results}) {
 
   export async function getServerSideProps(context) {
     const {genre} = context.query
+    const {value} = context.query
 
     // Fetch data from external API
+    if(value) {
+      const requests = await fetch(`https://api.themoviedb.org/3/${request.fetchSearchMovies.url}${value}`).then(res => res.json())
+      return { 
+      props: 
+      { 
+        results: requests.results 
+      } 
+    }
+    }
+      
     const requests = await fetch(`https://api.themoviedb.org/3/${request[genre]?.url || request.fetchActionMovies.url}`).then( res => res.json())
-    
-
     // Pass data to the page via props
     return { 
       props: 
