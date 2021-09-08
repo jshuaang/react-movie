@@ -11,7 +11,7 @@ function Search() {
 
     const searchMovie = (e) => {
         if(e.keyCode === 13){
-            router.push(`?value=${value}`)
+            router.push(`/?value=${value}`)
         }
     }
 
